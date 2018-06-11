@@ -4,7 +4,7 @@
 #
 Name     : rt-tests
 Version  : 1.3
-Release  : 4
+Release  : 5
 URL      : https://mirrors.edge.kernel.org/pub/linux/utils/rt-tests/rt-tests-1.3.tar.xz
 Source0  : https://mirrors.edge.kernel.org/pub/linux/utils/rt-tests/rt-tests-1.3.tar.xz
 Summary  : Programs used to test Priority Inheritance Mutexes
@@ -44,11 +44,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1528737832
+export SOURCE_DATE_EPOCH=1528739275
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1528737832
+export SOURCE_DATE_EPOCH=1528739275
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
