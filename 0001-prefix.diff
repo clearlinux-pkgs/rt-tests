@@ -1,0 +1,11 @@
+--- rt-tests-1.3/Makefile~	2018-06-11 10:11:00.053313563 -0700
++++ rt-tests-1.3/Makefile	2018-06-11 10:11:06.718313584 -0700
+@@ -24,7 +24,7 @@
+ RTTESTLIB = -lrttest -L$(OBJDIR)
+ EXTRA_LIBS ?= -ldl	# for get_cpu
+ DESTDIR	?=
+-prefix  ?= /usr/local
++prefix  ?= /usr
+ bindir  ?= $(prefix)/bin
+ mandir	?= $(prefix)/share/man
+ srcdir	?= $(prefix)/src
