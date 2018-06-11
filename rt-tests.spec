@@ -4,60 +4,78 @@
 #
 Name     : rt-tests
 Version  : 1.3
-Release  : 1
+Release  : 4
 URL      : https://mirrors.edge.kernel.org/pub/linux/utils/rt-tests/rt-tests-1.3.tar.xz
 Source0  : https://mirrors.edge.kernel.org/pub/linux/utils/rt-tests/rt-tests-1.3.tar.xz
 Summary  : Programs used to test Priority Inheritance Mutexes
 Group    : Development/Tools
 License  : GPL-2.0
+Requires: rt-tests-bin
+Requires: rt-tests-doc
 BuildRequires : numactl-dev
+Patch1: 0001-prefix.diff
 
 %description
 The pi_tests package contains programs used to test the functionality of 
 the priority inheritance attribute of POSIX mutexes on the Linux kernel
 
+%package bin
+Summary: bin components for the rt-tests package.
+Group: Binaries
+
+%description bin
+bin components for the rt-tests package.
+
+
+%package doc
+Summary: doc components for the rt-tests package.
+Group: Documentation
+
+%description doc
+doc components for the rt-tests package.
+
+
 %prep
 %setup -q -n rt-tests-1.3
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1528388140
+export SOURCE_DATE_EPOCH=1528737832
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1528388140
+export SOURCE_DATE_EPOCH=1528737832
 rm -rf %{buildroot}
 %make_install
+## make_install_append content
+rm -rf %{buildroot}/usr/src
+## make_install_append end
 
 %files
 %defattr(-,root,root,-)
-/usr/local/bin/cyclicdeadline
-/usr/local/bin/cyclictest
-/usr/local/bin/deadline_test
-/usr/local/bin/hackbench
-/usr/local/bin/pi_stress
-/usr/local/bin/pip_stress
-/usr/local/bin/pmqtest
-/usr/local/bin/ptsematest
-/usr/local/bin/queuelat
-/usr/local/bin/rt-migrate-test
-/usr/local/bin/sendme
-/usr/local/bin/signaltest
-/usr/local/bin/sigwaittest
-/usr/local/bin/svsematest
-/usr/local/share/man/man4/backfire.4.gz
-/usr/local/share/man/man8/cyclictest.8.gz
-/usr/local/share/man/man8/hackbench.8.gz
-/usr/local/share/man/man8/pi_stress.8.gz
-/usr/local/share/man/man8/pmqtest.8.gz
-/usr/local/share/man/man8/ptsematest.8.gz
-/usr/local/share/man/man8/rt-migrate-test.8.gz
-/usr/local/share/man/man8/sendme.8.gz
-/usr/local/share/man/man8/signaltest.8.gz
-/usr/local/share/man/man8/sigwaittest.8.gz
-/usr/local/share/man/man8/svsematest.8.gz
-/usr/local/src/backfire/Makefile
-/usr/local/src/backfire/backfire.c
+
+%files bin
+%defattr(-,root,root,-)
+/usr/bin/cyclicdeadline
+/usr/bin/cyclictest
+/usr/bin/deadline_test
+/usr/bin/hackbench
+/usr/bin/pi_stress
+/usr/bin/pip_stress
+/usr/bin/pmqtest
+/usr/bin/ptsematest
+/usr/bin/queuelat
+/usr/bin/rt-migrate-test
+/usr/bin/sendme
+/usr/bin/signaltest
+/usr/bin/sigwaittest
+/usr/bin/svsematest
+
+%files doc
+%defattr(-,root,root,-)
+%doc /usr/share/man/man4/*
+%doc /usr/share/man/man8/*
