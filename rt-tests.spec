@@ -4,7 +4,7 @@
 #
 Name     : rt-tests
 Version  : 1.3
-Release  : 5
+Release  : 6
 URL      : https://mirrors.edge.kernel.org/pub/linux/utils/rt-tests/rt-tests-1.3.tar.xz
 Source0  : https://mirrors.edge.kernel.org/pub/linux/utils/rt-tests/rt-tests-1.3.tar.xz
 Summary  : Programs used to test Priority Inheritance Mutexes
