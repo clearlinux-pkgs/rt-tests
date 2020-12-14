@@ -4,7 +4,7 @@
 #
 Name     : rt-tests
 Version  : 1.9
-Release  : 12
+Release  : 13
 URL      : https://mirrors.kernel.org/pub/linux/utils/rt-tests/rt-tests-1.9.tar.xz
 Source0  : https://mirrors.kernel.org/pub/linux/utils/rt-tests/rt-tests-1.9.tar.xz
 Summary  : Programs used to test Priority Inheritance Mutexes
