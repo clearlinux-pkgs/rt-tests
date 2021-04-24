@@ -4,7 +4,7 @@
 #
 Name     : rt-tests
 Version  : 1.10
-Release  : 16
+Release  : 17
 URL      : https://mirrors.kernel.org/pub/linux/utils/rt-tests/rt-tests-1.10.tar.xz
 Source0  : https://mirrors.kernel.org/pub/linux/utils/rt-tests/rt-tests-1.10.tar.xz
 Summary  : No detailed summary available
