@@ -4,7 +4,7 @@
 #
 Name     : rt-tests
 Version  : 2.1
-Release  : 20
+Release  : 21
 URL      : https://mirrors.kernel.org/pub/linux/utils/rt-tests/rt-tests-2.1.tar.xz
 Source0  : https://mirrors.kernel.org/pub/linux/utils/rt-tests/rt-tests-2.1.tar.xz
 Summary  : No detailed summary available
