@@ -4,7 +4,7 @@
 #
 Name     : rt-tests
 Version  : 2.4
-Release  : 29
+Release  : 30
 URL      : https://mirrors.kernel.org/pub/linux/utils/rt-tests/rt-tests-2.4.tar.xz
 Source0  : https://mirrors.kernel.org/pub/linux/utils/rt-tests/rt-tests-2.4.tar.xz
 Summary  : No detailed summary available
