@@ -7,7 +7,7 @@
 #
 Name     : rt-tests
 Version  : 2.7
-Release  : 34
+Release  : 35
 URL      : https://mirrors.kernel.org/pub/linux/utils/rt-tests/rt-tests-2.7.tar.gz
 Source0  : https://mirrors.kernel.org/pub/linux/utils/rt-tests/rt-tests-2.7.tar.gz
 Summary  : No detailed summary available
